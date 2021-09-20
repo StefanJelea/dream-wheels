@@ -1,0 +1,38 @@
+.footer-container {
+  background-color: #212529;
+  min-height: 220px;
+  color: white;
+  font-size: 20px;
+
+  .logo-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .social-media-col {
+    border-left: 1px solid;
+
+    ul {
+      list-style: none;
+    }
+
+    .nav-link {
+      color: white;
+      font-family: 'montserratsemibold';
+      font-size: 15px;
+    }
+
+    .social-media-li {
+      margin-bottom: 10px;
+    }
+
+    .icon-social-media {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .copyright {
+    font-size: 15px;
+  }
+}

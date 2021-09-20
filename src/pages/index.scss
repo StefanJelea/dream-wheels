@@ -1,0 +1,40 @@
+
+.hero-image-box {
+  background: url("../images/hero-image.jpg") center fixed no-repeat;
+  height: 100vh;
+  background-size: cover;
+
+
+  .hero-text-box {
+    color: white;
+    font-family: 'montserratblack';
+    height: 100%;
+  }
+
+  .hero-text-box h1 {
+    font-size: 5em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .hero-text-box h1{
+      font-size: 4em;
+    }
+    .home-page-description{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+.cars-preview-container {
+  min-height: 700px;
+
+  .cars-preview-title {
+    font-family: 'montserratblack';
+    color: #59253A;
+
+  }
+}
+

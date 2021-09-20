@@ -1,0 +1,59 @@
+.contact-page-container {
+
+
+  .contact-hero-image-box {
+    background: url("../../images/contactPageCoverPicture.jpg") center no-repeat;
+    background-size: cover;
+    height: 35vh;
+    width: 100%;
+    background-position: inherit;
+
+  }
+
+  .page-title {
+    font-family: 'montserratblack';
+    color: #59253A;
+  }
+
+  .contact-second-section {
+    min-height: 100px;
+  }
+
+  .contact-icons {
+    height: 150px;
+    fill: #59253A;
+  }
+
+  .contact-ways {
+    min-height: 300px;
+    max-width: 750px;
+  }
+
+  .contact-card-title {
+    font-size: 20px;
+    font-family: 'montserratblack';
+    color: #59253A;
+  }
+  .contact-card-information a{
+    font-size: 20px;
+    text-decoration: none;
+    text-underline: none;
+    color: #59253A;
+    font-family: 'montserratsemibold';
+    &:hover{
+      text-underline: #59253A;
+      text-decoration: #59253A;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .contact-hero-image-box {
+      height: 20vh;
+    }
+    .contact-second-section {
+      min-height: 100px;
+    }
+  }
+}
+
+

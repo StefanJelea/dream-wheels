@@ -1,0 +1,22 @@
+.about-page-container {
+
+
+  .about-hero-image-box {
+    background: url("../../images/aboutPageCoverPicture.jpg") center  no-repeat;
+    background-size: cover;
+    height: 35vh;
+    width: 100%;
+
+  }
+
+  .page-title {
+    font-family: 'montserratblack';
+    color: #59253A;
+  }
+  @media only screen and (max-width: 600px) {
+    .about-hero-image-box{
+      height: 20vh;
+    }
+  }
+
+}

@@ -1,0 +1,19 @@
+.information-card-container {
+  min-height: 600px;
+}
+
+.information-card-box {
+  background-color:#F8F8F8;
+  min-height: 400px;
+  padding: 40px;
+  border-radius: 5px;
+
+  .information-card-box-title{
+    font-family: "montserratblack";
+
+  }
+  .information-card-box-description{
+    min-height: 200px;
+    font-family: "montserratregular";
+  }
+}
