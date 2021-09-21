@@ -15,6 +15,7 @@ const ContactForm = ({onChange, ...props}) => {
     const [message, setMessage] = useState('')
     const [isLoading, setIsLoading] = useState(false)
     const [response, setResponse] = useState("")
+    const [showSendMessage, setShowSendMessage] = useState(false)
 
 
     const [nameError, setNameError] = useState("")
@@ -33,42 +34,12 @@ const ContactForm = ({onChange, ...props}) => {
             return false
         } else {
             setEmailError(null)
-            setEmailSucceeded("Thank you!")
+            setEmailSucceeded("Thank you! Our team will contact you soon.")
             return true
         }
 
     }
 
-
-    // const submitForm = (e) => {
-    //     e.preventDefault();
-    //     console.log(Array.from(e.target.elements))
-    //     const params = {
-    //         name: name,
-    //         surname: surname,
-    //         email: email,
-    //         phoneNumber: phoneNumber,
-    //         message: message,
-    //     }
-    //     setIsLoading(true)
-    //     axios({
-    //         method: 'POST',
-    //         url: "https://us-central1-dreamwheelsla.cloudfunctions.net/sendContactForm",
-    //         data: params,
-    //     }).then(response => {
-    //         setIsLoading(false);
-    //         setResponse(response.data);
-    //         setEmail("");
-    //         setShowButton(false);
-    //         console.log(response);
-    //     }).catch(() => {
-    //         setIsLoading(false);
-    //         console.log();
-    //     })
-    //
-    //
-    //
-    // }
 
     const submitForm = (e) => {
         console.log('testSubmit')
@@ -87,13 +58,14 @@ const ContactForm = ({onChange, ...props}) => {
             setIsLoading(true)
             axios({
                 method: "post",
-                url: "https://us-central1-dreamwheelsla.cloudfunctions.net/sendContactForm",
+                url: "https://us-central1-dreamwheels-105bd.cloudfunctions.net/sendContactForm",
                 data: params,
             }).then(response => {
                 setIsLoading(false);
                 setResponse(response.data);
                 setEmail("");
                 setShowButton(false);
+                setShowSendMessage(true);
 
 
                 console.log(response);
@@ -125,12 +97,23 @@ const ContactForm = ({onChange, ...props}) => {
                 <textarea id="Message" name={message} value={message} onChange={e => setMessage(e.target.value)}
                           placeholder="Type your message here" type="message"/>
                 <div className="alert">
-                    {emailSucceeded}
+
                     {emailError}
                 </div>
                 <div className="submit-button text-center">
-                    <Button>Submit</Button>
+                    {showButton && <Button type="submit" disabled={isLoading}>
+                        {!isLoading && "Send"}
+                        {isLoading && <div className="loading-button-animation d-flex align-items-center">
+                            <div className="d-flex loading-button text-center"></div>
+                            <div className="">Loading</div>
+                        </div>}
+                    </Button>}
                 </div>
+                {showSendMessage &&
+                <div className="text-center email-succeeded-message">
+                    {emailSucceeded}
+                </div>
+                    }
             </form>
         </div>
 

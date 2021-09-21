@@ -56,8 +56,18 @@ const ContactPage = () => {
                     <div className="col-12 text-center">
                         <h3>or leave us a message straight here using our form</h3>
                     </div>
-                    <div className="d-flex justify-content-center mt-5 mb-5">
+                    <div className="d-flex justify-content-center mt-3 mb-3 mt-md-5 mb-md-5">
                         <ContactForm/>
+                    </div>
+                    <div className="col-12 text-center">
+                        <h3>you can find us here</h3>
+                    </div>
+                    <div className="mapouter text-center">
+                        <div className="gmap_canvas mb-5 mt-5">
+                            <iframe width="600" height="500" id="gmap_canvas"
+                                    src="https://maps.google.com/maps?q=%C5%9Eoseaua%20Pavel%20D.%20Kiseleff&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                    frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe>
+                        </div>
                     </div>
                 </div>
 

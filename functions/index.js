@@ -18,24 +18,21 @@ let transporter = nodemailer.createTransport({
 
 
 exports.sendContactForm = functions.https.onRequest(async (req, res) => {
+    cors(req, res, () => {
 
+        try {
+            if (isCorsOptionRequest(req, res)) {
 
-    try {
-        if (isCorsOptionRequest(req, res)) {
+            } else {
+                if (req.method === "POST") {
 
-        } else {
-            if (req.method === "POST") {
+                    if (!req.body.email) {
+                        return res.status(400).send("Missing email!")
+                    }
 
-                if (!req.body.email) {
-                    return res.status(400).send("Missing email!")
-                }
-                if (!req.body.message) {
-                    return res.status(400).send("Missing email!")
-                }
+                    const toEmail = 'stefan.mountsoftware.test@gmail.com';
 
-                const toEmail = 'jeleastefan@gmail.com';
-
-                const html = `
+                    const html = `
             <h1>Dream Wheels Contact Form</h1>
             <h3>Client Name: ${req.body.name}</h3>
             <h3>Client Surname: ${req.body.surname}</h3>
@@ -43,42 +40,39 @@ exports.sendContactForm = functions.https.onRequest(async (req, res) => {
             <h3>Client Phone Number: ${req.body.phoneNumber}</h3>
             <p>Client Message: ${req.body.message}</p>`
 
-                const mailOptions = {
-                    from: 'Contact Form <dreawheelscontact@gmail.com>', // Something like: Jane Doe <janedoe@gmail.com>
-                    to: toEmail,
-                    subject: 'Contact form message: ' + req.body.email, // email subject
-                    html: html
-                };
+                    const mailOptions = {
+                        from: 'Contact Form <dreawheelscontact@gmail.com>', // Something like: Jane Doe <janedoe@gmail.com>
+                        to: toEmail,
+                        subject: 'Contact form message: ' + req.body.email, // email subject
+                        html: html
+                    };
 
-                // returning result
-                return transporter.sendMail(mailOptions, (error, info) => {
-                    if (error) {
-                        return res.send(error.toString());
-                    }
-                    return res.send('Sent');
-                });
+                    // returning result
+                    return transporter.sendMail(mailOptions, (error, info) => {
+                        if (error) {
+                            return res.send(200, error.toString());
+                        }
+                        return res.send(200, 'Sent');
+                    });
 
+                }
             }
+
+
+        } catch (e) {
+            console.log(e);
+            return res.send("Failed")
         }
 
-
-    } catch (e) {
-        console.log(e);
-        return res.send("Failed")
-    }
-
-
+    })
 });
 
 const isCorsOptionRequest = (req, resp) => {
     resp.set('Access-Control-Allow-Origin', '*');
     if (req.method === 'OPTIONS') {
-        resp.set('Access-Control-Allow-Methods', 'GET');
-        resp.set('Access-Control-Allow-Headers', 'Content-Type');
-        resp.set('Access-Control-Max-Age', '3600');
+        resp.set('Access-Control-Allow-Methods', 'GET, PUT, POST, OPTIONS');
         return true;
     }
 
     return false;
 };
-

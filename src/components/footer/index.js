@@ -27,7 +27,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-auto col-md-3 social-media-col mt-4">
+                    <div className="col-auto d-none d-md-block col-md-3 social-media-col mt-4">
                         <div>
                             <ul className="">
                                 <li className="nav-item active">
@@ -49,21 +49,21 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-auto col-md-3 social-media-col mt-4">
+                    <div className="col-12  text-center text-md-start col-md-3 social-media-col mt-4">
                         <ul>
                             <li className="social-media-li">
-                                <a className="nav-link" href="mailto:jeleastefan@gmail.com">
+                                <a className="nav-link" href="mailto:jeleastefan@gmail.com" target="_blank">
                                     <img className="icon-social-media" src={IconSocialGoogle} alt=""/>
                                 </a>
 
                             </li>
                             <li className="social-media-li">
-                                <a className="nav-link" href="#">
+                                <a className="nav-link" href="#" target="_blank">
                                     <img className="icon-social-media" src={IconSocialFacebook} alt=""/>
                                 </a>
                             </li>
                             <li className="social-media-li">
-                                <a className="nav-link" href="#">
+                                <a className="nav-link" href="#" target="_blank">
                                     <img className="icon-social-media" src={IconSocialInstagram} alt=""/>
                                 </a>
                             </li>
