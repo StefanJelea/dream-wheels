@@ -46,8 +46,8 @@ const ContactPage = () => {
                             <img className="contact-icons" src={MailIcon} alt="mailIcon"/>
                         </div>
                         <div className="contact-card-information mt-4">
-                            <a href="mailto:">
-                          jeleastefan@gmail.com
+                            <a href="mailto:dreawheelscontact@gmail.com">
+                                dreawheelscontact@gmail.com
                             </a>
                         </div>
 

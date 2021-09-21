@@ -1,6 +1,6 @@
 import * as React from "react"
 import './index.scss'
-import Logo from '../../images/baby-car.svg'
+import Logo from '../../images/logoWhite.png'
 import IconSocialFacebook from '../../images/facebook (1).svg'
 import IconSocialGoogle from '../../images/google.svg'
 import IconSocialInstagram from '../../images/instagram.svg'
@@ -14,17 +14,20 @@ const Footer = () => {
             <div className="container">
                 <div className="row d-flex">
                     <div className="col-12 col-md-6 text-center text-md-start mt-4">
-                        <div>
-                            Dream Wheels
-                        </div>
-                        <div>
+                        <div className="mb-3 mb-md-4">
                             <img className="logo-image" src={Logo} alt='logo'/>
                         </div>
+                        <div className="mb-2">
+                            Dream Wheels S.R.L
+                        </div>
+                        <div className="contact-details">Email: <a className="footer-contact" href="mailto:dreawheelscontact@gmail.com">dreawheelscontact@gmail.com
+                        </a>
+                        </div>
+                        <div className="contact-details mb-2"> Telephone:
+                            <a className="footer-contact" href="tel:0743700700">+00743700700</a>
+                        </div>
                         <div>
-                            Call us
-                            <div>
-                                <a href="tel:0743700700">0743700700</a>
-                            </div>
+                            Adress: Soseaua Pavel D. Kiseleff, Bucharest, Romania.
                         </div>
                     </div>
                     <div className="col-auto d-none d-md-block col-md-3 social-media-col mt-4">
@@ -70,7 +73,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="col-12 text-center mt-3 mb-3 copyright">
-                        <div>Copyright &copy; 2014-{new Date().getFullYear()} Dream Wheels All Rights Reserved</div>
+                        <div>Copyright &copy; 2020-{new Date().getFullYear()} Dream Wheels All Rights Reserved</div>
                     </div>
                 </div>
             </div>
