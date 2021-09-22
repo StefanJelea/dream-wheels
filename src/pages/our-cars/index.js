@@ -5,6 +5,7 @@ import Footer from "../../components/footer";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import CarCard from "../../components/carCard";
+import Button from "../../components/button";
 
 
 const OurCarsPage = () => {
@@ -36,12 +37,23 @@ const OurCarsPage = () => {
                 <div className="col-12 text-center ourcars-second-section">
                     <h3>See our car stock with immediate delivery </h3>
                 </div>
-                <div className="row">
-                    {
-                        cars1?.map(( car, index) => <CarCard car={car} key={index.toString()}/>)
-                    }
-                </div>
             </div>
+               <div className="row">
+                   {
+                       cars1?.map(( car, index) => <CarCard car={car} key={index.toString()}/>)
+                   }
+               </div>
+               <div className="row contact-us-our-cars-page">
+                   <div className="col-12 text-center align-self-center mb-5">
+                       <h3>See the car of your dreams ? Contact us right now for more details</h3>
+                       <a href="/contact">
+                           <div className="mt-5">
+                       <Button>Contact us</Button>
+                           </div>
+                       </a>
+                   </div>
+               </div>
+
            </div>
             <Footer/>
         </div>

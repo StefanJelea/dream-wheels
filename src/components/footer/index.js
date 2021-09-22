@@ -29,6 +29,7 @@ const Footer = () => {
                         <div>
                             Adress: Soseaua Pavel D. Kiseleff, Bucharest, Romania.
                         </div>
+
                     </div>
                     <div className="col-auto d-none d-md-block col-md-3 social-media-col mt-4">
                         <div>
@@ -61,18 +62,21 @@ const Footer = () => {
 
                             </li>
                             <li className="social-media-li">
-                                <a className="nav-link" href="#" target="_blank">
+                                <a className="nav-link" href="https://www.facebook.com/" target="_blank">
                                     <img className="icon-social-media" src={IconSocialFacebook} alt=""/>
                                 </a>
                             </li>
                             <li className="social-media-li">
-                                <a className="nav-link" href="#" target="_blank">
+                                <a className="nav-link" href="https://www.instagram.com/" target="_blank">
                                     <img className="icon-social-media" src={IconSocialInstagram} alt=""/>
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div className="col-12 text-center mt-3 mb-3 copyright">
+                        <div className="d-block d-md-none contact-details mb-3">
+                            <a className="footer-contact" href="/privacy-policy">Privacy Policy</a>
+                        </div>
                         <div>Copyright &copy; 2020-{new Date().getFullYear()} Dream Wheels All Rights Reserved</div>
                     </div>
                 </div>

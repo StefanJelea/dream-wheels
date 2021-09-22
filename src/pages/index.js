@@ -8,6 +8,7 @@ import Footer from "../components/footer";
 import InformationCard from "../components/informationCard";
 import CarCard from "../components/carCard";
 import Button from "../components/button";
+import CookieConsent from "react-cookie-consent";
 
 
 export const IndexPage = () => {
@@ -33,6 +34,14 @@ export const IndexPage = () => {
 
     return (
         <main>
+            <CookieConsent
+                location="bottom"
+                buttonText="Accept"
+                declineButtonText="Decline"
+                cookieName="gatsby-gdpr-google-analytics">
+                {data.cookiesPolicy}
+                <a href="/privacy-policy">Cookie Policy</a>
+            </CookieConsent>
             <NavBar/>
             <div className="container-fluid p-0 w-100 h-100">
                 <div className="hero-image-box">
@@ -64,10 +73,10 @@ export const IndexPage = () => {
                 <div className="container container-about">
                     <div className="row">
                     <div className="d-flex col-12  col-md-6 home-page-description">
-                        <InformationCard title={data.cardDescriptionTitle} description={data.cardDescription} buttonText={'Contact us'} urlPath="/contact"/>
+                        <InformationCard title={data.cardDescriptionTitle} description={data.cardDescription} buttonText={'Find a car'} urlPath="/our-cars"/>
                     </div>
                     <div className="d-flex col-12 col-md-6 home-page-description">
-                        <InformationCard title={data.cardDescriptionTitleSecond} description={data.cardDescriptionSecond} buttonText={'Find a car'} urlPath="/our-cars"/>
+                        <InformationCard title={data.cardDescriptionTitleSecond} description={data.cardDescriptionSecond} buttonText={'Contact us'} urlPath="/contact"/>
                     </div>
                     </div>
                 </div>

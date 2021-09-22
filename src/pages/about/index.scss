@@ -1,8 +1,7 @@
 .about-page-container {
 
-
   .about-hero-image-box {
-    background: url("../../images/aboutPageCoverPicture.jpg") center  no-repeat;
+    background: url("../../images/aboutPageCoverPicture.jpg") center no-repeat;
     background-size: cover;
     height: 35vh;
     width: 100%;
@@ -13,9 +12,59 @@
     font-family: 'montserratblack';
     color: #59253A;
   }
+
+  .about-us-row {
+    min-height: 350px;
+
+    .about-us-title {
+      font-family: 'montserratblack';
+    }
+
+    .about-us-description {
+      font-family: "montserratregular";
+      text-align: justify;
+    }
+  }
+
+  .team-row {
+    min-height: 700px;
+
+    .team-test {
+      height: 400px;
+      max-width: 500px;
+      margin-bottom: 15px;
+    }
+
+    .team-profile-img {
+      max-width: 100%;
+      height: inherit;
+
+    }
+
+    .team-name {
+      font-size: 20px;
+      font-family: 'montserratsemibold';
+    }
+
+    .team-position {
+      font-size: 18px;
+      font-family: 'montserratregular';
+    }
+    .team-profile-col{
+      border-bottom: 1px solid;
+    }
+  }
+
+
   @media only screen and (max-width: 600px) {
-    .about-hero-image-box{
+    .about-hero-image-box {
       height: 20vh;
+    }
+    .about-us-description{
+      padding: 20px;
+    }
+    .team-profile-col{
+      border-bottom: 1px solid;
     }
   }
 

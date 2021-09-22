@@ -15,4 +15,12 @@
   .ourcars-second-section {
     min-height: 100px;
   }
+  .contact-us-our-cars-page{
+    min-height: 250px;
+  }
+  @media only screen and (max-width: 600px) {
+    .contact-us-our-cars-page{
+      min-height: 150px;
+    }
+  }
 }
