@@ -68,10 +68,10 @@ const AboutPage = () => {
                         <div className="team-test">
                             <img className="team-profile-img" src={TeamPhoto1} alt="team1"/>
                         </div>
-                        <div className="team-name">
+                        <div className="team-name mt-4">
                             Richie Erickson
                         </div>
-                        <div className="team-position">
+                        <div className="team-position mb-4">
                             Sales Director
                         </div>
                     </div>
@@ -79,10 +79,10 @@ const AboutPage = () => {
                         <div className="team-test">
                             <img className="team-profile-img" src={TeamPhoto2} alt="team2"/>
                         </div>
-                        <div className="team-name">
+                        <div className="team-name mt-4">
                             Aarron Whittington
                         </div>
-                        <div className="team-position">
+                        <div className="team-position mb-4">
                             Founder
                         </div>
                     </div>
@@ -90,10 +90,10 @@ const AboutPage = () => {
                         <div className="team-test">
                             <img className="team-profile-img" src={TeamPhoto3} alt="team3"/>
                         </div>
-                        <div className="team-name">
+                        <div className="team-name mt-4">
                             Bilaal Bravo
                         </div>
-                        <div className="team-position">
+                        <div className="team-position mb-4">
                            Logistic
                         </div>
                     </div>
