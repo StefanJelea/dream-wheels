@@ -4,7 +4,7 @@ import Button from "../button";
 import InformationCard from "../informationCard";
 
 
-const CarCard = ({car, buttonTextCarCard, urlPathCarCard}) => {
+const CarCard = ({data ,car, buttonTextCarCard, urlPathCarCard}) => {
 
 
     return (
@@ -12,12 +12,12 @@ const CarCard = ({car, buttonTextCarCard, urlPathCarCard}) => {
         <div className="col-12 col-md-4 mb-5">
             <div style={{backgroundImage: `url(${car?.img})`}} className="text-center img-card-col">
             </div>
-            <div className="car-card-information"><b>Make:</b>&nbsp;{car?.make}</div>
-            <div className="car-card-information"><b>Model:</b>&nbsp;{car?.model}</div>
-            <div className="car-card-information"><b>Year:</b>&nbsp;{car?.year}</div>
-            <div className="car-card-information"><b>Mileage:</b>&nbsp;{car?.mileage}</div>
-            <div className="car-card-information"><b>Country:</b>&nbsp;{car?.country}</div>
-            <div className="car-card-information"><b>Price:</b>&nbsp;{car?.price}</div>
+            <div className="car-card-information"><b>{data.cardCardMake}:</b>&nbsp;{car?.make}</div>
+            <div className="car-card-information"><b>{data.cardCardModel}:</b>&nbsp;{car?.model}</div>
+            <div className="car-card-information"><b>{data.cardCardYear}:</b>&nbsp;{car?.year}</div>
+            <div className="car-card-information"><b>{data.cardCardMileage}:</b>&nbsp;{car?.mileage}</div>
+            <div className="car-card-information"><b>{data.cardCardCountry}:</b>&nbsp;{car?.country}</div>
+            <div className="car-card-information"><b>{data.cardCardPrice}:</b>&nbsp;{car?.price}</div>
         </div>
     )
 }

@@ -6,8 +6,7 @@ import IconSocialGoogle from '../../images/google.svg'
 import IconSocialInstagram from '../../images/instagram.svg'
 
 
-const Footer = () => {
-
+const Footer = ({data}) => {
 
     return (
         <div className="footer-container container-fluid">
@@ -20,14 +19,14 @@ const Footer = () => {
                         <div className="mb-2">
                             Dream Wheels S.R.L
                         </div>
-                        <div className="contact-details">Email: <a className="footer-contact" href="mailto:dreawheelscontact@gmail.com">dreawheelscontact@gmail.com
+                        <div className="contact-details">{data.contactUsEmail}: <a className="footer-contact" href="mailto:dreawheelscontact@gmail.com">dreawheelscontact@gmail.com
                         </a>
                         </div>
-                        <div className="contact-details mb-2"> Telephone:
+                        <div className="contact-details mb-2"> {data.contactUsMobile}:
                             <a className="footer-contact" href="tel:0743700700">+00743700700</a>
                         </div>
                         <div>
-                            Adress: Soseaua Pavel D. Kiseleff, Bucharest, Romania.
+                            {data.contactUsAddress}: Soseaua Pavel D. Kiseleff, Bucharest, Romania.
                         </div>
 
                     </div>
@@ -35,16 +34,16 @@ const Footer = () => {
                         <div>
                             <ul className="">
                                 <li className="nav-item active">
-                                    <a className="nav-link" href="/">Home</a>
+                                    <a className="nav-link" href="/">{data.navbarHome}</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/about">About</a>
+                                    <a className="nav-link" href="/about">{data.navbarAbout}</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/our-cars">Our Cars</a>
+                                    <a className="nav-link" href="/our-cars">{data.navbarOurCars}</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/contact">Contact</a>
+                                    <a className="nav-link" href="/contact">{data.navbarContact}</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="/privacy-policy">Privacy Policy</a>
@@ -75,9 +74,9 @@ const Footer = () => {
                     </div>
                     <div className="col-12 text-center mt-3 mb-3 copyright">
                         <div className="d-block d-md-none contact-details mb-3">
-                            <a className="footer-contact" href="/privacy-policy">Privacy Policy</a>
+                            <a className="footer-contact" href="/privacy-policy">{data.navbarPrivacyPolicy}</a>
                         </div>
-                        <div>Copyright &copy; 2020-{new Date().getFullYear()} Dream Wheels All Rights Reserved</div>
+                        <div>Copyright &copy; 2020-{new Date().getFullYear()} Dream Wheels {data.allRightsReserved}</div>
                     </div>
                 </div>
             </div>

@@ -37,19 +37,6 @@ const {data, cars, language, setLanguage} = UsePageData()
                     </div>
                 </div>
                 <div className="container cars-preview-container">
-                    {/*<div className="row about-home-page-row mt-3 mt-md-5">*/}
-                    {/*    <div className="col-12 text-center mb-5 mt-5 cars-preview-title">*/}
-                    {/*        <h2>Dream wheels team makes your dreams come true  </h2>*/}
-                    {/*    </div>*/}
-                    {/*    <div className="text-center">*/}
-                    {/*        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.*/}
-                    {/*    </div>*/}
-                    {/*    <div className="text-center mt-5">*/}
-                    {/*        <a href="/about">*/}
-                    {/*            <Button>About us</Button>*/}
-                    {/*        </a>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
                     <div className="row">
                     <div className="col-12 text-center mb-5 mt-5 cars-preview-title">
                         <h2>{data.cardDescriptionTitle2}</h2>
@@ -58,7 +45,7 @@ const {data, cars, language, setLanguage} = UsePageData()
                     </div>
                     <div className="row">
                         {
-                            cars?.sort( () => .5 - Math.random() ).splice(0,3).map((car, index) => <CarCard  car={car} key={index.toString()}/>)
+                            cars?.sort( () => .5 - Math.random() ).splice(0,3).map((car, index) => <CarCard data={data}  car={car} key={index.toString()}/>)
                         }
                         <div className="col-12 text-center mt-5 mb-5 mb-md-0">
                             <a href='/our-cars'>
@@ -77,7 +64,7 @@ const {data, cars, language, setLanguage} = UsePageData()
                     </div>
                     </div>
                 </div>
-                <Footer/>
+                <Footer data={data}/>
             </div>
         </main>
     )

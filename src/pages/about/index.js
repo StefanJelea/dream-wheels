@@ -75,7 +75,7 @@ const AboutPage = () => {
                             Richie Erickson
                         </div>
                         <div className="team-position mb-4">
-                            Sales Director
+                            {data.ourTeamPosition}
                         </div>
                     </div>
                     <div className="col-12 col-md-4 team-profile-col mb-5">
@@ -86,7 +86,7 @@ const AboutPage = () => {
                             Aarron Whittington
                         </div>
                         <div className="team-position mb-4">
-                            Founder
+                            {data.ourTeamPosition2}
                         </div>
                     </div>
                     <div className="col-12 col-md-4 team-profile-col mb-5">
@@ -97,12 +97,12 @@ const AboutPage = () => {
                             Bilaal Bravo
                         </div>
                         <div className="team-position mb-4">
-                           Logistic
+                            {data.ourTeamPosition3}
                         </div>
                     </div>
                 </div>
                 </div>
-            <Footer/>
+            <Footer data={data}/>
         </div>
 
     )

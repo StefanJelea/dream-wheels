@@ -40,7 +40,7 @@ const OurCarsPage = () => {
             </div>
                <div className="row">
                    {
-                       cars?.map(( car, index) => <CarCard car={car} key={index.toString()}/>)
+                       cars?.map(( car, index) => <CarCard data={data} car={car} key={index.toString()}/>)
                    }
                </div>
                <div className="row contact-us-our-cars-page">
@@ -55,7 +55,7 @@ const OurCarsPage = () => {
                </div>
 
            </div>
-            <Footer/>
+            <Footer data={data}/>
         </div>
 
     )

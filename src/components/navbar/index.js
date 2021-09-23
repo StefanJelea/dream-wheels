@@ -5,9 +5,8 @@ import RoIcon from '../../images/romania.svg'
 import EnIcon from '../../images/united-kingdom.svg'
 
 
-const NavBar = ({language, data, setLanguage}) => {
+const NavBar = ({ data, setLanguage}) => {
 
-    console.log(data, 'navbar')
 
 
     return (

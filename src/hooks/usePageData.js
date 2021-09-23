@@ -2,29 +2,35 @@ import * as React from "react"
 import {useEffect, useState} from "react";
 import axios from "axios";
 
-export default function UsePageData(){
 
-    const [data, setData] = useState({})
+export default function UsePageData() {
+
     const [cars, setCars] = useState([])
+
 
     const [language, setLanguage] = useState('en')
 
-
-
-
-
+    const [dataRo, setDataRo] = useState({})
+    const [dataEn, setDataEn] = useState({})
 
 
     useEffect(() => {
-        axios.get(`/axios-json-data/${language}/index.json`).then(response => {
-            setData(response.data)
-        })
-        axios.get(`/axios-json-data/${language}/cars.json`).then(response => {
+        if (Object.keys(language === 'en' ? dataEn : dataRo).length === 0) {
+            axios.get(`/axios-json-data/${language}/index.json`).then(response => {
+                if (language === 'en') {
+                    setDataEn(response.data)
+                } else {
+                    setDataRo(response.data)
+                }
+            })
+        }
+        axios.get(`/axios-json-data/cars.json`).then(response => {
             setCars(response.data)
         })
+
+
     }, [language])
 
 
-
-    return {data, cars, setLanguage}
+    return {data: language === "en" ? dataEn : dataRo, cars, setLanguage}
 }
