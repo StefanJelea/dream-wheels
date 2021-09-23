@@ -3,12 +3,24 @@ import './index.scss'
 import NavBar from "../../components/navbar";
 import Footer from "../../components/footer";
 
+import CookieConsent from "react-cookie-consent";
+import UsePageData from "../../hooks/usePageData";
+
 
 const PrivacyPolicy = () => {
+    const {data, cars, language, setLanguage} = UsePageData()
 
 
     return (
         <div className="container-fluid about-page-container p-0">
+            <CookieConsent
+                location="bottom"
+                buttonText="Accept"
+                declineButtonText="Decline"
+                cookieName="gatsby-gdpr-google-analytics">
+                {data.cookiesPolicy}&nbsp;&nbsp;
+                <a className="cookie-policy-link" href="/privacy-policy">cookie policy</a>
+            </CookieConsent>
             <NavBar/>
             <div className="container">
                 <h1>Privacy Policy for Dream Wheels</h1>

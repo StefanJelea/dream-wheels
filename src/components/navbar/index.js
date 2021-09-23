@@ -1,9 +1,14 @@
 import * as React from "react"
 import './index.scss'
 import Logo from '../../images/logoWhite.png'
+import RoIcon from '../../images/romania.svg'
+import EnIcon from '../../images/united-kingdom.svg'
+import UsePageData from "../../hooks/usePageData";
 
 
-const NavBar = () => {
+const NavBar = ({language, setLanguage}) => {
+
+    const {data, cars} = UsePageData()
 
 
     return (
@@ -19,16 +24,29 @@ const NavBar = () => {
             <div className="collapse  navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul className="navbar-nav">
                     <li className="nav-item active">
-                        <a className="nav-link" href="/">Home</a>
+                        <a className="nav-link" href="/">{data.navbarHome}</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/about">About</a>
+                        <a className="nav-link" href="/about">{data.navbarAbout}</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/our-cars">Our Cars</a>
+                        <a className="nav-link" href="/our-cars">{data.navbarOurCars}</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/contact">Contact</a>
+                        <a className="nav-link" href="/contact">{data.navbarContact}</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="language-link" onClick={() => setLanguage('ro')}>
+                            <img className="flag-icon" src={RoIcon} alt=""/>
+                            RO
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="language-link" onClick={() => setLanguage('en')}>
+                            <img className="flag-icon" src={EnIcon} alt=""/>
+
+                            EN
+                        </a>
                     </li>
 
                 </ul>

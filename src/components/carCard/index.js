@@ -10,8 +10,7 @@ const CarCard = ({car, buttonTextCarCard, urlPathCarCard}) => {
     return (
 
         <div className="col-12 col-md-4 mb-5">
-            <div className="text-center img-card-col">
-                <img className="card-card-image" src={car?.img}></img>
+            <div style={{backgroundImage: `url(${car?.img})`}} className="text-center img-card-col">
             </div>
             <div className="car-card-information"><b>Make:</b>&nbsp;{car?.make}</div>
             <div className="car-card-information"><b>Model:</b>&nbsp;{car?.model}</div>

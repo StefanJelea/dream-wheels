@@ -1,6 +1,4 @@
 import * as React from "react"
-import axios from "axios";
-import {useEffect, useState} from "react";
 import NavBar from "../components/navbar";
 import './index.scss'
 import '../styles.scss'
@@ -9,27 +7,16 @@ import InformationCard from "../components/informationCard";
 import CarCard from "../components/carCard";
 import Button from "../components/button";
 import CookieConsent from "react-cookie-consent";
+import UsePageData from "../hooks/usePageData";
 
 
 export const IndexPage = () => {
 
-    const [data, setData] = useState({})
-    const [cars, setCars] = useState([])
 
-
-
-
-    useEffect(() => {
-        axios.get('/axios-json-data/index.json').then(response => {
-            setData(response.data)
-        })
-        axios.get('/axios-json-data/cars.json').then(response => {
-            setCars(response.data)
-        })
-    }, [])
-
+const {data, cars, language, setLanguage} = UsePageData()
 
     console.log(data, 'test')
+    console.log( {data, cars, language, setLanguage})
 
 
     return (
@@ -39,10 +26,10 @@ export const IndexPage = () => {
                 buttonText="Accept"
                 declineButtonText="Decline"
                 cookieName="gatsby-gdpr-google-analytics">
-                {data.cookiesPolicy}
-                <a href="/privacy-policy">Cookie Policy</a>
+                {data.cookiesPolicy}&nbsp;&nbsp;
+                <a className="cookie-policy-link" href="/privacy-policy">cookie policy</a>
             </CookieConsent>
-            <NavBar/>
+            <NavBar language={language} setLanguage={setLanguage}/>
             <div className="container-fluid p-0 w-100 h-100">
                 <div className="hero-image-box">
                     <div className="hero-text-box d-flex text-center align-items-center justify-content-center">
@@ -68,7 +55,7 @@ export const IndexPage = () => {
                     {/*</div>*/}
                     <div className="row">
                     <div className="col-12 text-center mb-5 mt-5 cars-preview-title">
-                        <h2>Cars Available Right Now </h2>
+                        <h2>{data.cardDescriptionTitle2}</h2>
                     </div>
 
                     </div>
@@ -78,7 +65,7 @@ export const IndexPage = () => {
                         }
                         <div className="col-12 text-center mt-5 mb-5 mb-md-0">
                             <a href='/our-cars'>
-                                <Button>View all cars</Button>
+                                <Button>{data.viewAllCarButton}</Button>
                             </a>
                         </div>
                     </div>

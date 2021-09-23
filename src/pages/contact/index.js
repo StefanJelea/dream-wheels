@@ -5,18 +5,30 @@ import PhoneIcon from '../../images/smartphone.svg'
 import MailIcon from '../../images/email.svg'
 import ContactForm from "../../components/contactForm";
 import Footer from "../../components/footer";
+import CookieConsent from "react-cookie-consent";
+import UsePageData from "../../hooks/usePageData";
 
 
 const ContactPage = () => {
 
+    const {data, cars, language, setLanguage} = UsePageData()
+
 
     return (
         <div className="container-fluid contact-page-container p-0">
+            <CookieConsent
+                location="bottom"
+                buttonText="Accept"
+                declineButtonText="Decline"
+                cookieName="gatsby-gdpr-google-analytics">
+                {data.cookiesPolicy}&nbsp;&nbsp;
+                <a className="cookie-policy-link" href="/privacy-policy">cookie policy</a>
+            </CookieConsent>
             <NavBar/>
             <div className="container">
                 <div className="row">
                     <div className="col-12 text-center mt-5 page-title">
-                        <h1>Contact us</h1>
+                        <h1>{data.contactUsSectionTitle}</h1>
                     </div>
 
                 </div>
@@ -26,41 +38,41 @@ const ContactPage = () => {
             <div className="container mt-5">
                 <div className="row justify-content-center">
                     <div className="col-12 text-center contact-second-section">
-                        <h3>If you have any questions do not hesitate to contact us</h3>
+                        <h3>{data.contactUsTitle}</h3>
                     </div>
                     <div className="d-flex contact-ways row">
-                    <div className="col-12 col-md-6 text-center">
-                        <div className="contact-card-title mb-2 mb-md-3">Phone</div>
-                        <div className="">
-                            <img className="contact-icons" src={PhoneIcon} alt="phoneIcon"/>
+                        <div className="col-12 col-md-6 text-center">
+                            <div className="contact-card-title mb-2 mb-md-3">{data.contactUsMobile}</div>
+                            <div className="">
+                                <img className="contact-icons" src={PhoneIcon} alt="phoneIcon"/>
+                            </div>
+                            <div className="contact-card-information mt-4">
+                                <a href="tel:23232332">
+                                    0743700700
+                                </a>
+                            </div>
                         </div>
-                        <div className="contact-card-information mt-4">
-                            <a href="tel:23232332">
-                        0743700700
-                            </a>
-                        </div>
-                    </div>
-                    <div className="col-12 col-md-6 text-center mb-5 mb-md-0 mt-4 mt-md-0">
-                        <div className="contact-card-title mb-0 mb-md-3">Email</div>
-                        <div className="">
-                            <img className="contact-icons" src={MailIcon} alt="mailIcon"/>
-                        </div>
-                        <div className="contact-card-information mt-4">
-                            <a href="mailto:dreawheelscontact@gmail.com">
-                                dreawheelscontact@gmail.com
-                            </a>
-                        </div>
+                        <div className="col-12 col-md-6 text-center mb-5 mb-md-0 mt-4 mt-md-0">
+                            <div className="contact-card-title mb-0 mb-md-3">{data.contactUsEmail}</div>
+                            <div className="">
+                                <img className="contact-icons" src={MailIcon} alt="mailIcon"/>
+                            </div>
+                            <div className="contact-card-information mt-4">
+                                <a href="mailto:dreawheelscontact@gmail.com">
+                                    dreawheelscontact@gmail.com
+                                </a>
+                            </div>
 
-                    </div>
+                        </div>
                     </div>
                     <div className="col-12 text-center">
-                        <h3>or leave us a message straight here using our form</h3>
+                        <h3>{data.contactUsTitle2}</h3>
                     </div>
                     <div className="d-flex justify-content-center mt-3 mb-3 mt-md-5 mb-md-5">
                         <ContactForm/>
                     </div>
                     <div className="col-12 text-center">
-                        <h3>you can find us here</h3>
+                        <h3>{data.contactUsTitle3}</h3>
                     </div>
                     <div className="mapouter text-center">
                         <div className="gmap_canvas mb-5 mt-5">
