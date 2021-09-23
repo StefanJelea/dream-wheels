@@ -21,7 +21,7 @@ const OurCarsPage = () => {
                 {data.cookiesPolicy}&nbsp;&nbsp;
                 <a className="cookie-policy-link" href="/privacy-policy">cookie policy</a>
             </CookieConsent>
-            <NavBar/>
+            <NavBar language={language} setLanguage={setLanguage} data={data}/>
             <div className="container">
                 <div className="row">
                     <div className="col-12 text-center mt-5 page-title">

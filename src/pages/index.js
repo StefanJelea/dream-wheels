@@ -15,9 +15,6 @@ export const IndexPage = () => {
 
 const {data, cars, language, setLanguage} = UsePageData()
 
-    console.log(data, 'test')
-    console.log( {data, cars, language, setLanguage})
-
 
     return (
         <main>
@@ -29,7 +26,7 @@ const {data, cars, language, setLanguage} = UsePageData()
                 {data.cookiesPolicy}&nbsp;&nbsp;
                 <a className="cookie-policy-link" href="/privacy-policy">cookie policy</a>
             </CookieConsent>
-            <NavBar language={language} setLanguage={setLanguage}/>
+            <NavBar language={language} setLanguage={setLanguage} data={data}/>
             <div className="container-fluid p-0 w-100 h-100">
                 <div className="hero-image-box">
                     <div className="hero-text-box d-flex text-center align-items-center justify-content-center">
@@ -73,10 +70,10 @@ const {data, cars, language, setLanguage} = UsePageData()
                 <div className="container container-about">
                     <div className="row">
                     <div className="d-flex col-12  col-md-6 home-page-description">
-                        <InformationCard title={data.cardDescriptionTitle} description={data.cardDescription} buttonText={'Find a car'} urlPath="/our-cars"/>
+                        <InformationCard title={data.cardDescriptionTitle} description={data.cardDescription} buttonText={data.findCarButton} urlPath="/our-cars"/>
                     </div>
                     <div className="d-flex col-12 col-md-6 home-page-description">
-                        <InformationCard title={data.cardDescriptionTitleSecond} description={data.cardDescriptionSecond} buttonText={'Contact us'} urlPath="/contact"/>
+                        <InformationCard title={data.cardDescriptionTitleSecond} description={data.cardDescriptionSecond} buttonText={data.contactButton} urlPath="/contact"/>
                     </div>
                     </div>
                 </div>

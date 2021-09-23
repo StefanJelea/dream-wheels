@@ -3,12 +3,11 @@ import './index.scss'
 import Logo from '../../images/logoWhite.png'
 import RoIcon from '../../images/romania.svg'
 import EnIcon from '../../images/united-kingdom.svg'
-import UsePageData from "../../hooks/usePageData";
 
 
-const NavBar = ({language, setLanguage}) => {
+const NavBar = ({language, data, setLanguage}) => {
 
-    const {data, cars} = UsePageData()
+    console.log(data, 'navbar')
 
 
     return (

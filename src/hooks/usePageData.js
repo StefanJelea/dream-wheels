@@ -24,5 +24,7 @@ export default function UsePageData(){
         })
     }, [language])
 
+
+
     return {data, cars, setLanguage}
 }
