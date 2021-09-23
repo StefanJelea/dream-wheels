@@ -5,9 +5,8 @@
   "cardDescriptionTitle": "Our Cars",
   "cardDescriptionTitle2": "Cars Available Right Now",
   "cardDescriptionTitleSecond": "Your Research",
-  "cardDescription": "Every single car we find undergoes a strict quality control process to offer you the most unique European models: from the French refinement to the German quality, along with the British elegance and the Italian design. You will find here what you’ve always dreamed of ! So that you can fully enjoy your passion, European Vintage Cars offers you personalized services on shipping and administrative formalities. All the way to your garage door. Everywhere in the world.",
-  "cardDescriptionSecond": "Looking for an exceptional car? Our team at European Vintage Cars along with our specialized network are here to help you find your dream car, covering the whole of Europe. Together we will set up a tailor-made search process according to your criteria, with great care and attention to our quality standards. We will provide you with a detailed record to present you our selection among the best cars available.The perfect car is here. Ask us to find it for you!",
-   "viewAllCarButton" :"View all cars",
+  "cardDescription": "Every single car we find undergoes a strict quality control process to offer you the most unique European models: from the French refinement to the German quality, along with the British elegance and the Italian design. You will find here what you’ve always dreamed of ! So that you can fully enjoy your passion, Dream Wheels offers you personalized services on shipping and administrative formalities. All the way to your garage door. Everywhere in the world.",
+  "cardDescriptionSecond": "Looking for an exceptional car? Our team at Dream Wheels along with our specialized network are here to help you find your dream car, covering the whole of Europe. Together we will set up a tailor-made search process according to your criteria, with great care and attention to our quality standards. We will provide you with a detailed record to present you our selection among the best cars available.The perfect car is here. Ask us to find it for you!",
 
 
    "aboutUsSectionTitle" : "About us",
@@ -23,14 +22,38 @@
 
   "contactUsSectionTitle" : "Contact us",
   "contactUsTitle" : "If you have any questions do not hesitate to contact us",
-  "contactUsTitle2" : "or leave us a message straight here using our form",
+  "contactUsTitle2" : "or leave us a message straight here using our contact form",
   "contactUsTitle3" : "you can find us here",
   "contactUsMobile" : "Telephone",
   "contactUsEmail" : "Email",
+  "contactUsAddress" : "Address",
+  "allRightsReserved" : "All Rights Reserved",
 
 
 
-  "contactButton" :   "Contact us"
+  "navbarHome" : "Home",
+  "navbarAbout" : "About",
+  "navbarOurCars" : "Our Cars",
+  "navbarContact" : "Contact",
+  "navbarPrivacyPolicy" : "Privacy policy",
 
+
+  "ourTeamPosition" : "Sales Director",
+  "ourTeamPosition2" : "Founder",
+  "ourTeamPosition3" : "Logistics",
+
+
+
+  "contactButton" :   "Contact us",
+  "viewAllCarButton" :"View all cars",
+  "findCarButton" : "Find a car",
+
+
+  "cardCardMake" : "Make",
+  "cardCardModel" : "Model",
+  "cardCardYear" : "Year",
+  "cardCardMileage" : "Mileage",
+  "cardCardCountry" : "Country",
+  "cardCardPrice" : "Price"
 
 }

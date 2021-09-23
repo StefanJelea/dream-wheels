@@ -1,13 +1,12 @@
 {
   "cookiesPolicy": "Site-ul nostru foloseste propriile noastre cookie-uri si de la partenerii nostri pentru a va imbunatati experienta si pentru a afisa continut personalizat sau reclame relevante pentru dvs. Pentru mai multe detalii puteti accesa",
   "title": "Dream Wheels",
-  "subtitle": "Nu doar sa o visezi, ci doar sa o conduci",
+  "subtitle": "Nu doar sa o visezi, trebuie sa o conduci",
   "cardDescriptionTitle": "Masinile noastre",
   "cardDescriptionTitle2": "Masini disponibile chiar acum",
   "cardDescriptionTitleSecond": "Varianta ta",
-  "cardDescription": "Fiecare masina pe care o gasim sufera un proces strict de control al calitatii pentru a va oferi cele mai unice modele europene: de la rafinamentul francez la calitatea germana, alaturi de eleganta britanica si designul italian. Veti gasi aici ceea ce ati visat intotdeauna! Pentru a va putea bucura pe deplin de pasiunea dvs., European Vintage Cars va ofera servicii personalizate privind formalitatile administrative si de transport maritim. Tot drumul pana la usa garajului tau. Peste tot in lume.",
-  "cardDescriptionSecond": "Cautati o masina exceptionala? Echipa noastra de la European Vintage Cars impreuna cu reteaua noastra specializata sunt aici pentru a va ajuta sa va gasiti masina de vis, acoperind intreaga Europa. impreuna vom stabili un proces de cautare personalizat conform criteriilor dvs., cu mare atentie si atentie la standardele noastre de calitate. Va vom oferi o inregistrare detaliata pentru a va prezenta selectia noastra printre cele mai bune masini disponibile. Masina perfecta este aici. Cereti-ne sa-l gasim pentru dvs.!",
-  "viewAllCarButton" :"Vizualizati toate masinile noastre",
+  "cardDescription": "Fiecare masina pe care o gasim sufera un proces strict de control al calitatii pentru a va oferi cele mai unice modele europene: de la rafinamentul francez la calitatea germana, alaturi de eleganta britanica si designul italian. Veti gasi aici ceea ce ati visat intotdeauna! Pentru a va putea bucura pe deplin de pasiunea dvs., Dream Wheels va ofera servicii personalizate privind formalitatile administrative si de transport maritim. Tot drumul pana la usa garajului tau. Peste tot in lume.",
+  "cardDescriptionSecond": "Cautati o masina exceptionala? Echipa noastra de la Dream Wheels impreuna cu reteaua noastra specializata sunt aici pentru a va ajuta sa va gasiti masina de vis, acoperind intreaga Europa. impreuna vom stabili un proces de cautare personalizat conform criteriilor dvs., cu mare atentie si atentie la standardele noastre de calitate. Va vom oferi o inregistrare detaliata pentru a va prezenta selectia noastra printre cele mai bune masini disponibile. Masina perfecta este aici. Cereti-ne sa-l gasim pentru dvs.!",
 
 
    "aboutUsSectionTitle" : "Despre noi",
@@ -23,14 +22,38 @@
 
   "contactUsSectionTitle" : "Contacteaza-ne",
   "contactUsTitle" : "Daca aveti intrebari, nu ezitati sa ne contactati",
-  "contactUsTitle2" : "sau ne lasati un mesaj direct aici folosind formularul nostru",
+  "contactUsTitle2" : "sau ne lasati un mesaj direct aici folosind formularul nostru de contact",
   "contactUsTitle3" : "ne gasesti aici",
   "contactUsMobile" : "Telefon",
   "contactUsEmail" : "E-mail",
+  "contactUsAddress" : "Adresa",
+  "allRightsReserved" : "Toate drepturile rezervate",
 
 
 
-  "contactButton" :   "Contacteaza-ne"
+  "navbarHome" : "Acasa",
+  "navbarAbout" : "Despre noi",
+  "navbarOurCars" : "Masinile noastre",
+  "navbarContact" : "Contact",
+  "navbarPrivacyPolicy" : "Politica de Confidentialitate",
 
 
+
+  "contactButton" :   "Contacteaza-ne",
+  "viewAllCarButton" :"Vizualizati toate masinile noastre",
+  "findCarButton" : "Gaseste o masina",
+
+
+
+  "ourTeamPosition" : "Director de vanzari",
+  "ourTeamPosition2" : "Fondator",
+  "ourTeamPosition3" : "Responsabil Logistica",
+
+
+  "cardCardMake" : "Marca",
+  "cardCardModel" : "Model",
+  "cardCardYear" : "An",
+  "cardCardMileage" : "Kilometri",
+  "cardCardCountry" : "Tara",
+  "cardCardPrice" : "Pret"
 }
