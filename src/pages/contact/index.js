@@ -69,7 +69,7 @@ const ContactPage = () => {
                         <h3>{data.contactUsTitle2}</h3>
                     </div>
                     <div className="d-flex justify-content-center mt-3 mb-3 mt-md-5 mb-md-5">
-                        <ContactForm/>
+                        <ContactForm data={data}/>
                     </div>
                     <div className="col-12 text-center">
                         <h3>{data.contactUsTitle3}</h3>

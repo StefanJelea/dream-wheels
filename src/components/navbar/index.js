@@ -14,7 +14,6 @@ const NavBar = ({data, setLanguage}) => {
     }
 
 
-
     return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a className="navbar-brand" href="/">
@@ -42,14 +41,11 @@ const NavBar = ({data, setLanguage}) => {
                         <li className="nav-item">
                             <a className="language-link" onClick={() => updateLanguage('ro')}>
                                 <img className="flag-icon" src={RoIcon} alt=""/>
-                                RO
                             </a>
                         </li>
                         <li className="nav-item">
                             <a className="language-link" onClick={() => updateLanguage('en')}>
                                 <img className="flag-icon" src={EnIcon} alt=""/>
-
-                                EN
                             </a>
                         </li>
                     </ul>

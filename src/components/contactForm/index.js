@@ -6,7 +6,7 @@ import {useState} from "react";
 import PropTypes from "prop-types";
 
 
-const ContactForm = ({onChange, ...props}) => {
+const ContactForm = ({data, onChange, ...props}) => {
 
     const [name, setName] = useState("")
     const [surname, setSurname] = useState('')
@@ -29,12 +29,12 @@ const ContactForm = ({onChange, ...props}) => {
 
     const validateForm = () => {
         if (email === "") {
-            setEmailError("Invalid Email!")
+            setEmailError(`${data.contactInvalidEmail}`)
             setEmailSucceeded(null)
             return false
         } else {
             setEmailError(null)
-            setEmailSucceeded("Thank you! Our team will contact you soon.")
+            setEmailSucceeded(`${data.contactSuccess}`)
             return true
         }
 
@@ -106,7 +106,7 @@ const ContactForm = ({onChange, ...props}) => {
                 </div>
                 <div className="submit-button text-center">
                     {showButton && <Button type="submit" disabled={isLoading}>
-                        {!isLoading && "Send"}
+                        {!isLoading && `${data.sendButton}`}
                         {isLoading && <div className="loading-button-animation d-flex align-items-center">
                             <div className="d-flex loading-button text-center"></div>
                             <div className="">Loading</div>
@@ -117,7 +117,7 @@ const ContactForm = ({onChange, ...props}) => {
                 <div className="text-center email-succeeded-message">
                     {emailSucceeded}
                 </div>
-                    }
+                }
             </form>
         </div>
 

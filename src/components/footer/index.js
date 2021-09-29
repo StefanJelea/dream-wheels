@@ -46,7 +46,7 @@ const Footer = ({data}) => {
                                     <a className="nav-link" href="/contact">{data.navbarContact}</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/privacy-policy">Privacy Policy</a>
+                                    <a className="nav-link" href="/privacy-policy">{data.navbarPrivacyPolicy}</a>
                                 </li>
 
                             </ul>

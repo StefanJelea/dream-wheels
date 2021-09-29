@@ -14,7 +14,7 @@
    "aboutUsTitle2" : "Our Story",
    "aboutUsTitle3" : "Our Team",
   "aboutUsDescription" :"Aarron, Richie and Bilaal. Nice to meet you! We all shared the same passion and admiration for classic automobiles, thus we decided to found Dream Wheels in order to come a step closer to all other classic cars aficionados. \nThe process of buying such a car takes time and a lot of good thought, and we want to help you out in making the best decision suitable for you, your needs and expectations and your overall happiness and content. \nWe are here to share our knowledge and admiration for beautiful classic cars with you. This is our core business: our interaction with our customers, turning them from potential interested buyers into proud, knowledgeable and happy classic cars owners.",
-  "aboutUsDescription2" :"A classic story, as well as the cars we offer for sale. \nRichie and Aarron met in a classic cars festival, where they drove their own classic automobile. They got talking and realized that there was something more beyond their common passion for this type of vehicles. It was their need to share their passion with many other people, in terms of advice, discussions, opinions, and not simply making a sale happen. Putting all their ideas together, they founded Dream Wheels starting from their enthusiastic idea of being closely next to potential buyers, from very beginning and up to completion of the sale process, creating liaisons that would stay for a lifetime. One of their shared dream was to maintain a strong connexion between all classic cars owners, via regular get-togethers, shared rides, shared holidays, shared festival participations and many more to keep the group united.\nLater on, Bilaal showed up with a strong desire to get hired. Because the two founders saw his spark regarding classic automobiles, Bilaal did join the company, not just as an employee, but as a shareholder. Bilaal keeps the business going from the logistic perspective and his insights have helped the company grow even more and realign to our initial common dream.",
+  "aboutUsDescription2" :"A classic story, as well as the cars we offer for sale. Richie and Aarron met in a classic cars festival, where they drove their own classic automobile. They got talking and realized that there was something more beyond their common passion for this type of vehicles. It was their need to share their passion with many other people, in terms of advice, discussions, opinions, and not simply making a sale happen. Putting all their ideas together, they founded Dream Wheels starting from their enthusiastic idea of being closely next to potential buyers, from very beginning and up to completion of the sale process, creating liaisons that would stay for a lifetime. One of their shared dream was to maintain a strong connexion between all classic cars owners, via regular get-togethers, shared rides, shared holidays, shared festival participations and many more to keep the group united.\nLater on, Bilaal showed up with a strong desire to get hired. Because the two founders saw his spark regarding classic automobiles, Bilaal did join the company, not just as an employee, but as a shareholder. Bilaal keeps the business going from the logistic perspective and his insights have helped the company grow even more and realign to our initial common dream.",
 
   "ourCarsSectionTitle" : "Our cars",
   "ourCarsTitle" : "See our cars stock with immediate delivery",
@@ -47,6 +47,7 @@
   "contactButton" :   "Contact us",
   "viewAllCarButton" :"View all cars",
   "findCarButton" : "Find a car",
+  "sendButton" : "Send",
 
 
   "cardCardMake" : "Make",
@@ -54,6 +55,11 @@
   "cardCardYear" : "Year",
   "cardCardMileage" : "Mileage",
   "cardCardCountry" : "Country",
-  "cardCardPrice" : "Price"
+  "cardCardPrice" : "Price",
+
+
+
+  "contactInvalidEmail" : "Invalid Email",
+  "contactSuccess" : "Thank you! Our team will contact you soon."
 
 }
