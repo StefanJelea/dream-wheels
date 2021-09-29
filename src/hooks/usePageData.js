@@ -5,10 +5,13 @@ import axios from "axios";
 
 export default function UsePageData() {
 
+    const [language, setLanguage] = useState(localStorage.getItem('language') || 'en')
+
+
     const [cars, setCars] = useState([])
 
 
-    const [language, setLanguage] = useState('en')
+
 
     const [dataRo, setDataRo] = useState({})
     const [dataEn, setDataEn] = useState({})

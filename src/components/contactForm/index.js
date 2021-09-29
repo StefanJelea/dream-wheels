@@ -63,7 +63,11 @@ const ContactForm = ({onChange, ...props}) => {
             }).then(response => {
                 setIsLoading(false);
                 setResponse(response.data);
+                setName("");
+                setSurname("");
                 setEmail("");
+                setPhoneNumber("");
+                setMessage("");
                 setShowButton(false);
                 setShowSendMessage(true);
 
