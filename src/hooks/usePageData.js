@@ -1,16 +1,24 @@
 import * as React from "react"
 import {useEffect, useState} from "react";
 import axios from "axios";
+import localStorageIsDefined, {localStorageGet} from "../services/localStorageService";
+import localStorageService from "../services/localStorageService";
 
 
 export default function UsePageData() {
 
-    const [language, setLanguage] = useState(localStorage.getItem('language') || 'en')
+    // let defaultLanguage = 'en'
+    // if(localStorageIsDefined()){
+    //     defaultLanguage = window.localStorage.getItem('language') || defaultLanguage
+    // }
+    //
+    // const [language, setLanguage] = useState(defaultLanguage)
 
+
+
+    const [language, setLanguage] = useState(localStorageGet('language') || 'en')
 
     const [cars, setCars] = useState([])
-
-
 
 
     const [dataRo, setDataRo] = useState({})
